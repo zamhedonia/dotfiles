@@ -61,6 +61,7 @@ alias inverse-headphones="$HOME/Programme/Inverse-Headphone.sh"
 alias pythonv="$HOME/.venv/bin/python3"
 alias pipv="$HOME/.venv/bin/pip"
 alias rm="safe rm"
+alias hx="helix"
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
