@@ -40,6 +40,8 @@ if (( ENABLE_ZINIT )); then
     zinit light zsh-users/zsh-syntax-highlighting
     zinit light zsh-users/zsh-completions
     zinit light zsh-users/zsh-autosuggestions
+    zinit ice lucid wait'0'
+    zinit light joshskidmore/zsh-fzf-history-search
   fi
 fi
 
