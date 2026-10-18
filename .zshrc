@@ -71,6 +71,7 @@ if (( ENABLE_ALIASES )); then
   alias rm="safe rm"
   alias hx="helix"
   alias venv="source ~/.venv/bin/activate"
+  alias files="yazi"
 fi
 
 # ──────────────────────────────────────────────
