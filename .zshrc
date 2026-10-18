@@ -14,6 +14,16 @@ ENABLE_KEYBINDS=1       # Ctrl+Arrow word navigation
 ENABLE_HISTORY=1        # History settings
 ENABLE_FASTFETCH=1      # Fastfetch greeting on startup
 ENABLE_LOCAL_ENV=1      # Source ~/.local/bin/env (+ create it with scripts subfolder)
+ENABLE_TOGGLES_FILE=1   # Read ~/.zshrc-toggles to override the toggles above
+ENABLE_POST_FILE=1      # Source ~/.zshrc-post after everything else
+
+# ──────────────────────────────────────────────
+# Toggle overrides (~/.zshrc-toggles)
+# ──────────────────────────────────────────────
+if (( ENABLE_TOGGLES_FILE )) && [ -f "$HOME/.zshrc-toggles" ]; then
+  source "$HOME/.zshrc-toggles"
+fi
+
 # ──────────────────────────────────────────────
 # Zinit
 # ──────────────────────────────────────────────
@@ -164,4 +174,11 @@ EOF
   fi
 
   . "$HOME/.local/bin/env"
+fi
+
+# ──────────────────────────────────────────────
+# Post-config commands (~/.zshrc-post), runs last
+# ──────────────────────────────────────────────
+if (( ENABLE_POST_FILE )) && [ -f "$HOME/.zshrc-post" ]; then
+  source "$HOME/.zshrc-post"
 fi
