@@ -82,6 +82,7 @@ if (( ENABLE_ALIASES )); then
   alias hx="helix"
   alias venv="source ~/.venv/bin/activate"
   alias files="yazi"
+  alias disks="dysk"
 fi
 
 # ──────────────────────────────────────────────
